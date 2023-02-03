@@ -1,0 +1,24 @@
+body {
+  background-color: #35667C;
+  font-family: 'Nunito', sans-serif;
+}
+h1 {
+  color: #fff;
+  font-size: 47px;
+  box-shadow: ;
+}
+nav ul {
+  color: #fff;
+}
+nav a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+}
+header {
+  background: url(../images/header-photo.png) right top / cover;
+  color: #fff;
+}
+h2, h3, h4, h5 {
+  color: #6B350E;
+}
