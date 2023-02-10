@@ -1,24 +1,130 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
 body {
+  display: flex;
   background-color: #35667C;
   font-family: 'Nunito', sans-serif;
+  border-radius: 6px;
+  line-height: 3;
+  padding: 38px;
 }
-h1 {
-  color: #fff;
-  font-size: 47px;
-  box-shadow: ;
-}
-nav ul {
-  color: #fff;
-}
-nav a {
-  text-decoration: none;
-  font-size: 22px;
-  color: #fff;
+.container {
+  background-color: white;
+  border-radius: 6px;
 }
 header {
-  background: url(../images/header-photo.png) right top / cover;
-  color: #fff;
+  background: linear-gradient( rgba(107,53,14,1) 0%, rgba(255,255,255,0) 100%), url(../images/header-photo.jpg) right top / cover;
+  color: white;
+  border-radius: 6px;
 }
-h2, h3, h4, h5 {
+header .masthead {
+  padding: 7% 3%;
+}
+h1 {
+  color: white;
+  font-size: 47px;
+  box-shadow: ;
+  text-align: center;
+  font-weight: 100;
+}
+nav {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 6px;
+  justify-content: space-between;
+}
+nav ul {
+  color: white;
+  list-style-type: none;
+}
+nav li {
+  display: inline-flex;
+}
+nav ul a {
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px 0 100px;
   color: #6B350E;
+}
+main .first-main-div {
+  text-align: center;
+}
+section {
+  display: inline-flex;
+  flex-direction: row;
+}
+section svg {
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+}
+.coffeeshop-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 30px;
+}
+.menu-links {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.menu-links a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  background-size: cover;
+  aspect-ratio: 502 / 390;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 30px;
+}
+.menu-links .drinks {
+  background-image: url(../images/drink\ menu\ photo.jpg);
+}
+.menu-links .food {
+  background-image: url(../images/food\ menu\ photo.jpg);
+}
+footer {
+  color: #6B350E;
+  border-top: 1px solid #6B350E;
+  justify-content: space-around;
+}
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.social-ps {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+@media (min-width: 375px) {
+  nav {
+    text-align: center;
+    padding: 20px 30px;
+    display: flex;
+  }
+  .menu-links {
+    display: flex;
+  }
+}
+@media (min-width: 600px) {
+  nav {
+    display: flex;
+  }
 }
