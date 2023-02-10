@@ -7,48 +7,43 @@ img {
 }
 body {
   display: flex;
-  background-color: #35667C;
   font-family: 'Nunito', sans-serif;
   border-radius: 6px;
   line-height: 3;
-  padding: 38px;
 }
 .container {
   background-color: white;
   border-radius: 6px;
 }
 header {
-  background: linear-gradient( rgba(107,53,14,1) 0%, rgba(255,255,255,0) 100%), url(../images/header-photo.jpg) right top / cover;
+  background: linear-gradient( rgba(74, 36, 9,1) 0%, rgba(255,255,255,0) 100%), url(../images/header-photo.jpg) right top / cover;
   color: white;
   border-radius: 6px;
 }
 header .masthead {
   padding: 7% 3%;
 }
-h1 {
+.masthead p {
   color: white;
-  font-size: 47px;
-  box-shadow: ;
+  font-size: 40px;
+  font-weight: 900;
+  text-shadow: 0px 5px 12px #4A2409;
   text-align: center;
-  font-weight: 100;
+}
+h1 {
+  font-weight: 900;
 }
 nav {
-  background: rgba(255, 255, 255, 0);
-  border-radius: 6px;
-  justify-content: space-between;
-}
-nav ul {
   color: white;
-  list-style-type: none;
 }
-nav li {
-  display: inline-flex;
-}
-nav ul a {
+nav a {
   text-decoration: none;
   font-size: 22px;
   color: white;
   text-transform: uppercase;
+}
+.nav-buttons {
+
 }
 main {
   display: flex;
@@ -59,9 +54,8 @@ main {
 main .first-main-div {
   text-align: center;
 }
-section {
-  display: inline-flex;
-  flex-direction: row;
+main img {
+  aspect-ratio: 390 / 390;
 }
 section svg {
   justify-content: center;
@@ -77,7 +71,6 @@ section svg {
 .menu-links {
   display: flex;
   gap: 30px;
-  margin-bottom: 50px;
 }
 .menu-links a {
   color: white;
@@ -102,16 +95,10 @@ footer {
   color: #6B350E;
   border-top: 1px solid #6B350E;
   justify-content: space-around;
+  margin-top: 50px;
 }
-.social-wrapper {
-  display: flex;
-  flex-direction: column;
+.footer-wrapper {
   text-align: center;
-}
-.social-ps {
-  display: inline-flex;
-  justify-content: space-around;
-  flex-direction: row;
 }
 @media (min-width: 375px) {
   nav {
@@ -124,7 +111,45 @@ footer {
   }
 }
 @media (min-width: 600px) {
+  body {
+    background-color: #35667C;
+    margin: 10px;
+  }
+  .container {
+    margin: auto;
+    max-width: 1320px;
+    width: 100%;
+  }
   nav {
     display: flex;
+    justify-content: space-between;
+  }
+  header {
+    margin: 10px;
+  }
+  main  {
+    max-width: 1052px;
+  }
+  .content-container {
+    padding: 0 134px;
+  }
+  section {
+    display: flex;
+    align-items: center;
+  }
+  .text-wrapper {
+    margin-left: 10px;
+  }
+  .menu-links {
+    display: flex;
+  }
+  .social-ps {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 100px 0 100px;
+  }
+  .phone {
+    order: -1;
   }
 }
