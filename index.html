@@ -128,5 +128,41 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script>
+      let sectionImg = document.querySelectorAll("section img");
+      let sectionText = document.querySelectorAll("section .text-wrapper");
+
+      for (let i = 0; i < sectionImg.length; i++) {
+        let movement = 100; // odd rows
+        if (i % 2 == 0) {
+          movement = -movement; // even rows
+        }
+        gsap.from(sectionImg[i], {
+          scrollTrigger: {
+            trigger: sectionImg[i],
+            start: "top 85%",
+            end: "bottom 80%",
+            scrub: 1,
+            markers: false,
+          },
+          x: movement,
+          opacity: 0,
+        });
+        gsap.from(sectionText[i], {
+          scrollTrigger: {
+            trigger: sectionText[i],
+            start: "top 85%",
+            end: "bottom 80%",
+            scrub: 1,
+            markers: false,
+          },
+          x: -movement,
+          opacity: 0,
+        });
+      }
+    </script>
   </body>
 </html>
